@@ -9,9 +9,9 @@ Este es el repositorio del *Grupo 1*, cuyos integrantes son:
 * Ayudante: **Maciel Ripetti**
 
 ## Wiki
-* [Enlace al Modelo de contexto](https://gitlab.inf.utfsm.cl/matias.torres/sistema-de-ingreso/-/wikis/Modelo-de-Contexto)
-* [Enlace al Modelo de Dominio](https://gitlab.inf.utfsm.cl/matias.torres/sistema-de-ingreso/-/wikis/Modelo-de-Dominio)
-* [Enlace Wiki](https://gitlab.inf.utfsm.cl/matias.torres/sistema-de-ingreso/-/wikis/Wiki-INF236)
+* [Enlace al Diagrama de contexto](https://gitlab.inf.utfsm.cl/mveliz/inf236-2023-1-par201-grupo-1/-/wikis/Diagrama-de-Contexto)
+* [Enlace al Modelo de Dominio](https://gitlab.inf.utfsm.cl/mveliz/inf236-2023-1-par201-grupo-1/-/wikis/Modelo-de-Dominio)
+* [Enlace Wiki](https://gitlab.inf.utfsm.cl/mveliz/inf236-2023-1-par201-grupo-1/-/wikis/Wiki-INF236)
 
 ## Videos
 
