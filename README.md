@@ -1,92 +1,86 @@
-# INF236-2023-1-PAR201-GRUPO-1
+# Grupo 1
 
+Este es el repositorio del *Grupo 1*, cuyos integrantes son:
 
+* Francisco Encina Aballay - 202030536-6
+* Nicolás Robles Martínez - 202030546-3
+* Matías Torres Velazquez - 202030537-4
+* Profesor: **Alexis Henriquez**
+* Ayudante: **Maciel Ripetti**
 
-## Getting started
+## Wiki
+* [Enlace al Modelo de contexto](https://gitlab.inf.utfsm.cl/matias.torres/sistema-de-ingreso/-/wikis/Modelo-de-Contexto)
+* [Enlace al Modelo de Dominio](https://gitlab.inf.utfsm.cl/matias.torres/sistema-de-ingreso/-/wikis/Modelo-de-Dominio)
+* [Enlace Wiki](https://gitlab.inf.utfsm.cl/matias.torres/sistema-de-ingreso/-/wikis/Wiki-INF236)
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+## Videos
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+* [Video presentación avance 1](https://youtu.be/n5oyO6FyPAQ)
 
-## Add your files
+## Objetivos
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+1. Implementar un sistema de registro electrónico de la información de los pacientes, que permita una gestión  
+más efectiva de los datos y una mejor coordinación entre los distintos profesionales de la salud que  
+participan en el proceso de atención.
 
-```
-cd existing_repo
-git remote add origin https://gitlab.inf.utfsm.cl/mveliz/inf236-2023-1-par201-grupo-1.git
-git branch -M main
-git push -uf origin main
-```
+2. Reducir la carga administrativa de los profesionales de la salud, mediante la automatización de tareas  
+repetitivas y la simplificación de los procesos de registro y gestión de la información.
 
-## Integrate with your tools
+3. Mejorar la seguridad de los pacientes mediante la implementación de un sistema de alerta temprana para  
+posibles reacciones alérgicas a medicamentos y la gestión adecuada de los casos en que se presenten  
+dichas reacciones.
 
-- [ ] [Set up project integrations](https://gitlab.inf.utfsm.cl/mveliz/inf236-2023-1-par201-grupo-1/-/settings/integrations)
+## Criterios de éxito
 
-## Collaborate with your team
+1. Funcionalidad: El software debe cumplir con los requisitos y especificaciones establecidos y funcionar  
+según lo previsto.
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+2. Fiabilidad: El software debe ser confiable y no debe fallar o presentar errores.  
 
-## Test and Deploy
+3. Usabilidad: El software debe ser fácil de usar y entender para el usuario final.
 
-Use the built-in continuous integration in GitLab.
+4. Mantenibilidad: El software debe ser fácil de mantener y actualizar en el futuro.
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+## Actores relevantes
 
-***
+1. Paciente.
 
-# Editing this README
+2. Auxiliar.
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
+3. Tens.
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+4. Enfermera.
 
-## Name
-Choose a self-explaining name for your project.
+5. Médico.
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+## Historias de usuario
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+### Historia 1
+Como personal del servicio de urgencias, quiero poder registrar los datos personales del paciente en una ficha de atención electrónica, para que el proceso de atención sea más rápido y eficiente.
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+#### Criterios de aceptación
+1. Dado que la ficha de atención se escribe a mano y ha generado confusiones en los pacientes, cuando se implementen las fichas electrónica debe permitir la entrada de datos personales, como nombre, apellido, fecha de nacimiento, número de teléfono, dirección, entre otros.
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+2. Dado que la letra del personal de urgencias puede causar confusión cuando la ficha de atención electrónica se implemente, entonces será fácil de usar para los pacientes tener conocimiento de las recetas, diagnostocios y demás.
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+3. Dado que hoy se almacenan todas las fichas en papel, cuando se implemente el sistema de ingreso entonces los datos ingresados por el usuario deben ser almacenados de manera segura y confidencial.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+### Historia 2
+Como usuario del servicio de urgencia de salud pública (SAPU), quiero que los médicos puedan registrar la anamnesis y los exámenes que se deben realizar electrónicamente, para que la atención sea más eficiente.
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+#### Criterios de aceptación
+1. Dado que al paciente expone su situación de salud, cuando el medico registre la anamnesis entonces debe permitir el registro de esta y de los exámenes que se deben realizar en la ficha de atención electrónica.
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+2. Dado la alta cantidad de pacientes atendidos por los médicos cuando estos quieran registrar los datos en la ficha de atención electrónica entonces el sistema deberá ser fácil de usar para ellos.
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+3. Dado que los los datos ingresados en las fichas manuales no permiten enterarnos de datos de los pacientes cuando las fichas de atención electrónica se almacenen de manera segura y confidencial, entonces podremos tener datos de atenciones previas de los pacientes.
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+### Historia 3
+Como usuario del servicio de urgencia de salud pública (SAPU), quiero que los medicamentos que me receten sean registrados electrónicamente y que se me entregue una copia de la ficha de atención clínica, para que la atención sea más eficiente.
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+#### Criterios de aceptación
+1. Dado que al paciente se le receten medicamentos cuando este reciba su ficha de atención electrónica entonces tendrá el registro de los medicamentos recetados por el médico.
 
-## License
-For open source projects, say how it is licensed.
+2. Dado que el personal de urgencias tome los datos del paciente, cuando deban ingresar los datos al sistema entonces se encontrarán con un sistema amigable y fácil de usar
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+3. Dado que ha finalizado la atención del paciente, cuando este se retire entonces deberá recibir una copia de la ficha de atención clínica que incluya la información de los medicamentos recetados.
