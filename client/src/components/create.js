@@ -42,10 +42,10 @@ export default function Create() {
  // This following section will display the form that takes the input from the user.
  return (
    <div>
-     <h3>Create New Record</h3>
+     <h3>Crear un nuevo Paciente</h3>
      <form onSubmit={onSubmit}>
        <div className="form-group">
-         <label htmlFor="name">Name</label>
+         <label htmlFor="name">Nombre</label>
          <input
            type="text"
            className="form-control"
@@ -55,7 +55,7 @@ export default function Create() {
          />
        </div>
        <div className="form-group">
-         <label htmlFor="position">Position</label>
+         <label htmlFor="position">Cargo</label>
          <input
            type="text"
            className="form-control"
@@ -102,10 +102,11 @@ export default function Create() {
            <label htmlFor="positionSenior" className="form-check-label">Senior</label>
          </div>
        </div>
+       <br></br>
        <div className="form-group">
          <input
            type="submit"
-           value="Create person"
+           value="Crear Paciente"
            className="btn btn-primary"
          />
        </div>

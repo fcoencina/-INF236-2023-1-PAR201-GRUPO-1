@@ -12,8 +12,10 @@ export default function Navbar() {
    <div>
      <nav className="navbar navbar-expand-lg navbar-light bg-light">
        <NavLink className="navbar-brand" to="/">
-       <img style={{"width" : 25 + '%'}} src="https://d3cy9zhslanhfa.cloudfront.net/media/3800C044-6298-4575-A05D5C6B7623EE37/4B45D0EC-3482-4759-82DA37D8EA07D229/webimage-8A27671A-8A53-45DC-89D7BF8537F15A0D.png"></img>
+       <img style={{"width" : 8 + '%'}} src="https://cdn.pixabay.com/photo/2016/01/12/23/21/paramedic-1136916_1280.png"></img>
+       <h1 style={{"text-align":+"center"}}>S.A.P.U.</h1>
        </NavLink>
+       
        <button
          className="navbar-toggler"
          type="button"
@@ -30,7 +32,7 @@ export default function Navbar() {
          <ul className="navbar-nav ml-auto">
            <li className="nav-item">
              <NavLink className="nav-link" to="/create">
-               Create Record
+               Generar Paciente
              </NavLink>
            </li>
          </ul>
