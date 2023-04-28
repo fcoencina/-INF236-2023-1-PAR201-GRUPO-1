@@ -11,6 +11,7 @@ Este es el repositorio del *Grupo 1*, cuyos integrantes son:
 ## Wiki
 * [Enlace al Diagrama de contexto](https://gitlab.inf.utfsm.cl/mveliz/inf236-2023-1-par201-grupo-1/-/wikis/Diagrama-de-Contexto)
 * [Enlace al Modelo de Dominio](https://gitlab.inf.utfsm.cl/mveliz/inf236-2023-1-par201-grupo-1/-/wikis/Modelo-de-Dominio)
+* [Enlace a los Diagramas de Secuencia](https://gitlab.inf.utfsm.cl/mveliz/inf236-2023-1-par201-grupo-1/-/wikis/Diagramas-de-Secuencia)
 * [Enlace Wiki](https://gitlab.inf.utfsm.cl/mveliz/inf236-2023-1-par201-grupo-1/-/wikis/Wiki-INF236)
 
 ## Videos
