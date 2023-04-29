@@ -41,7 +41,7 @@ export default function Create() {
  
  // This following section will display the form that takes the input from the user.
  return (
-   <div>
+   <div style={{margin:20}}>
      <h3>Crear un nuevo Paciente</h3>
      <form onSubmit={onSubmit}>
        <div className="form-group">

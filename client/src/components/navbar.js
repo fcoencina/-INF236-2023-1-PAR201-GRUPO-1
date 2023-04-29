@@ -10,9 +10,9 @@ import { NavLink } from "react-router-dom";
 export default function Navbar() {
  return (
    <div>
-     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-       <NavLink className="navbar-brand" to="/">
-       <img style={{"width" : 8 + '%'}} src="https://cdn.pixabay.com/photo/2016/01/12/23/21/paramedic-1136916_1280.png"></img>
+     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+       <NavLink className="navbar-brand" to="/" style={{display:"flex",alignItems:"center",padding:10}}>
+       <img style={{"width" : 8 + '%',marginRight:10}} src="https://cdn.pixabay.com/photo/2016/01/12/23/21/paramedic-1136916_1280.png"></img>
        <h1 style={{"text-align":+"center"}}>S.A.P.U.</h1>
        </NavLink>
        

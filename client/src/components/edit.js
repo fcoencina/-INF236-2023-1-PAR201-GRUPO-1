@@ -66,11 +66,11 @@ export default function Edit() {
  
  // This following section will display the form that takes input from the user to update the data.
  return (
-   <div>
-     <h3>Update Record</h3>
+   <div style={{margin:20}}>
+     <h3>Editar Datos del Paciente</h3>
      <form onSubmit={onSubmit}>
        <div className="form-group">
-         <label htmlFor="name">Name: </label>
+         <label htmlFor="name">Nombre: </label>
          <input
            type="text"
            className="form-control"
@@ -80,7 +80,7 @@ export default function Edit() {
          />
        </div>
        <div className="form-group">
-         <label htmlFor="position">Position: </label>
+         <label htmlFor="position">Posición: </label>
          <input
            type="text"
            className="form-control"
