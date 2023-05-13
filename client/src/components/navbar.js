@@ -12,7 +12,7 @@ export default function Navbar() {
    <div>
      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
        <NavLink className="navbar-brand" to="/" style={{display:"flex",alignItems:"center",padding:10}}>
-       <img style={{"width" : 8 + '%',marginRight:10}} src="https://cdn.pixabay.com/photo/2016/01/12/23/21/paramedic-1136916_1280.png"></img>
+       <img style={{"width" : 8 + '%',marginRight:10}} src="https://cdn.pixabay.com/photo/2016/01/12/23/21/paramedic-1136916_1280.png" alt=""></img>
        <h1 style={{"text-align":+"center"}}>S.A.P.U.</h1>
        </NavLink>
        
