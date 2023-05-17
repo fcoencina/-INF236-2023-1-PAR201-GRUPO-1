@@ -65,8 +65,7 @@ export default function RecordList() {
 
   // This following section will display the table with the records of individuals.
   return (
-    <div style={{ margin: 20 }}>
-      <br></br>
+    <div style={{marginTop: "150px"}}>
       <form class="d-flex">
         <input className="form-control me-sm-2" type="search" placeholder="Buscar Paciente" />
         <button className="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>

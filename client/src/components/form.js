@@ -5,36 +5,44 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 
 // We import NavLink to utilize the react router.
-import { NavLink } from "react-router-dom";
+//import { NavLink } from "react-router-dom";
 
 export default function Form() {
     return (
-        <form>
+        <form style={{marginTop: "150px"}}>
             <fieldset>
-                <legend>Legend</legend>
-                <div className="form-group row">
-                    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-                    <div className="col-sm-10">
-                        <input type="text" readonly="" className="form-control-plaintext" id="staticEmail" value="email@example.com" />
-                    </div>
+                <legend>Formulario</legend>
+                <div class="form-group">
+                    <label class="col-form-label mt-4" for="inputDefault">Nombre</label>
+                    <input type="text" class="form-control" placeholder="Ingrese nombre del paciente" id="inputDefault" />
                 </div>
                 <div className="form-group">
-                    <label for="exampleInputEmail1" className="form-label mt-4">Email address</label>
-                    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
-                    <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+                    <label for="exampleInputEmail1" className="form-label mt-4">Email</label>
+                    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese email"/>
                 </div>
                 <div className="form-group">
-                    <label for="exampleInputPassword1" className="form-label mt-4">Password</label>
-                    <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
-                </div>
-                <div className="form-group">
-                    <label for="exampleSelect1" className="form-label mt-4">Example select</label>
+                    <label for="exampleSelect1" className="form-label mt-4">Sexo</label>
                     <select className="form-select" id="exampleSelect1">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                        <option>Masculino</option>
+                        <option>Femenino</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label mt-4" for="inputDefault">Dirección</label>
+                    <input type="text" class="form-control" placeholder="Ingrese dirección del paciente" id="inputDefault" />
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label mt-4" for="inputDefault">Móvil</label>
+                    <input type="text" class="form-control" placeholder="Formato: +569..." id="inputDefault" />
+                </div>
+                <div className="form-group">
+                    <label for="exampleSelect1" className="form-label mt-4">Categoria emergencia</label>
+                    <select className="form-select" id="exampleSelect1">
+                        <option>C1</option>
+                        <option>C2</option>
+                        <option>C3</option>
+                        <option>C4</option>
+                        <option>C5</option>
                     </select>
                 </div>
                 <div className="form-group">
@@ -48,7 +56,7 @@ export default function Form() {
                     </select>
                 </div>
                 <div className="form-group">
-                    <label for="exampleTextarea" className="form-label mt-4">Example textarea</label>
+                    <label for="exampleTextarea" className="form-label mt-4">Observaciones</label>
                     <textarea className="form-control" id="exampleTextarea" rows="3"></textarea>
                 </div>
                 <div className="form-group">
