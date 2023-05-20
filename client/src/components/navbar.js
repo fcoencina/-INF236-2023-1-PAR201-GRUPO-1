@@ -36,11 +36,6 @@ export default function Navbar() {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/form">
-                Form
-              </NavLink>
-            </li>
-            <li className="nav-item">
               <NavLink className="nav-link" to="/create">
                 Ingresar Paciente
               </NavLink>

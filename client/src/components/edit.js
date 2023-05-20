@@ -76,7 +76,7 @@ export default function Edit() {
  
  // This following section will display the form that takes input from the user to update the data.
  return (
-   <div style={{margin:20 }}>
+   <div style={{marginTop: "150px"}}>
      <h3>Editar Datos del Paciente</h3>
      <form onSubmit={onSubmit}>
        <div className="form-group">
