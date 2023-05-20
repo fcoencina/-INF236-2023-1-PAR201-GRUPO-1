@@ -87,7 +87,7 @@ Como usuario del servicio de urgencia de salud pública (SAPU), quiero que los m
 
 3. Dado que ha finalizado la atención del paciente, cuando este se retire entonces deberá recibir una copia de la ficha de atención clínica que incluya la información de los medicamentos recetados.
 
-## 
+## Instrucciones de Ejecución del Programa
 Mern Stack code for the [Mern Tutorial](https://www.mongodb.com/languages/mern-stack-tutorial)
 
 ## prerequisites
