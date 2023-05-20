@@ -41,8 +41,13 @@ recordRoutes.route("/record/add").post(function (req, response) {
   let db_connect = dbo.getDb();
   let myobj = {
     name: req.body.name,
-    position: req.body.position,
-    level: req.body.level,
+    rut: req.body.rut,
+    sexo: req.body.sexo,
+    f_nac: req.body.f_nac,
+    direccion: req.body.direccion,
+    comuna: req.body.comuna,
+    telefono: req.body.telefono,
+    afiliacion: req.body.afiliacion
   };
   db_connect.collection("records").insertOne(myobj, function (err, res) {
     if (err) throw err;
@@ -57,8 +62,13 @@ recordRoutes.route("/update/:id").post(function (req, response) {
   let newvalues = {
     $set: {
       name: req.body.name,
-      position: req.body.position,
-      level: req.body.level,
+      rut: req.body.rut,
+      sexo: req.body.sexo,
+      f_nac: req.body.f_nac,
+      direccion: req.body.direccion,
+      comuna: req.body.comuna,
+      telefono: req.body.telefono,
+      afiliacion: req.body.afiliacion
     },
   };
   db_connect

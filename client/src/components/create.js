@@ -4,8 +4,13 @@ import { useNavigate } from "react-router";
 export default function Create() {
  const [form, setForm] = useState({
    name: "",
-   position: "",
-   level: "",
+   rut: "",
+   sexo: "",
+   f_nac: "",
+   direccion: "",
+   comuna: "",
+   telefono: "",
+   afiliacion: ""
  });
  const navigate = useNavigate();
  
@@ -35,7 +40,15 @@ export default function Create() {
      return;
    });
  
-   setForm({ name: "", position: "", level: "" });
+   setForm({
+      name: "",
+      rut: "",
+      sexo: "",
+      f_nac: "",
+      direccion: "",
+      comuna: "",
+      telefono: "",
+      afiliacion: ""});
    navigate("/");
  }
  
@@ -55,52 +68,82 @@ export default function Create() {
          />
        </div>
        <div className="form-group">
-         <label htmlFor="position">Cargo</label>
+         <label htmlFor="rut">R.U.T.</label>
          <input
            type="text"
            className="form-control"
-           id="position"
+           id="rut"
            value={form.position}
-           onChange={(e) => updateForm({ position: e.target.value })}
+           onChange={(e) => updateForm({ rut: e.target.value })}
          />
        </div>
+       <label>Sexo:</label>
        <div className="form-group">
          <div className="form-check form-check-inline">
            <input
              className="form-check-input"
              type="radio"
              name="positionOptions"
-             id="positionIntern"
-             value="Intern"
-             checked={form.level === "Intern"}
-             onChange={(e) => updateForm({ level: e.target.value })}
+             id="sexo"
+             value="masculino"
+             checked={form.sexo === "masculino"}
+             onChange={(e) => updateForm({ sexo: e.target.value })}
            />
-           <label htmlFor="positionIntern" className="form-check-label">Intern</label>
+           <label htmlFor="sexoMasculino" className="form-check-label">Masculino</label>
          </div>
          <div className="form-check form-check-inline">
            <input
              className="form-check-input"
              type="radio"
              name="positionOptions"
-             id="positionJunior"
-             value="Junior"
-             checked={form.level === "Junior"}
-             onChange={(e) => updateForm({ level: e.target.value })}
+             id="sexo"
+             value="femenino"
+             checked={form.sexo === "femenino"}
+             onChange={(e) => updateForm({ sexo: e.target.value })}
            />
-           <label htmlFor="positionJunior" className="form-check-label">Junior</label>
+           <label htmlFor="sexoFemenino" className="form-check-label">Femenino</label>
          </div>
-         <div className="form-check form-check-inline">
-           <input
-             className="form-check-input"
-             type="radio"
-             name="positionOptions"
-             id="positionSenior"
-             value="Senior"
-             checked={form.level === "Senior"}
-             onChange={(e) => updateForm({ level: e.target.value })}
-           />
-           <label htmlFor="positionSenior" className="form-check-label">Senior</label>
-         </div>
+       </div>
+       <div>
+        <label>Fecha de Nacimiento:</label>
+        <br></br>
+        <input
+          className="from-date"
+          type="date"
+          id="f_nac"
+          value={form.f_nac}
+          onChange={(e) => updateForm({ f_nac: e.target.value})}
+        />
+       </div>
+       <div className="form-group">
+         <label htmlFor="direccion">Direccion.</label>
+         <input
+           type="text"
+           className="form-control"
+           id="direccion"
+           value={form.position}
+           onChange={(e) => updateForm({ direccion: e.target.value })}
+         />
+       </div>
+       <div className="form-group">
+         <label htmlFor="comuna">Comuna</label>
+         <input
+           type="text"
+           className="form-control"
+           id="comuna"
+           value={form.position}
+           onChange={(e) => updateForm({ comuna: e.target.value })}
+         />
+       </div>
+       <div className="form-group">
+         <label htmlFor="telefono">Teléfono</label>
+         <input
+           type="text"
+           className="form-control"
+           id="telefono"
+           value={form.position}
+           onChange={(e) => updateForm({ telefono: e.target.value })}
+         />
        </div>
        <br></br>
        <div className="form-group">
