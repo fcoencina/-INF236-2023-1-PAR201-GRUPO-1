@@ -87,32 +87,26 @@ Como usuario del servicio de urgencia de salud pública (SAPU), quiero que los m
 
 3. Dado que ha finalizado la atención del paciente, cuando este se retire entonces deberá recibir una copia de la ficha de atención clínica que incluya la información de los medicamentos recetados.
 
-## Instrucciones de Ejecución del Programa
-Mern Stack code for the [Mern Tutorial](https://www.mongodb.com/languages/mern-stack-tutorial)
+## Instrucciones de Ejecución de la Aplicación
 
-## prerequisites
-- Install node.js ([Node](https://nodejs.org/en/))
-- Install Code editor ([VS code](https://code.visualstudio.com/))
-- Create Atlas cluster ([Get started with Atlas](https://www.mongodb.com/docs/atlas/getting-started/?_ga=2.60427181.186721350.1682018286-1256642793.1682018286))
+`Para ejecutar la aplicación correctamente es necesario tener instalado previamente Node.js junto con su gestor de paquetes(npm).`
 
-> Disclaimer: The React application works with Node.js 16 and below.
-## How To Run
-Create an Atlas URI connection parameter in `server/config.env` with your Atlas URI (get it from your own created cluster), should look like this:
-```
-ATLAS_URI=mongodb+srv://<username>:<password>@sandbox.jadwj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
-PORT=5000
-```
+1. Descargar desde el repositorio https://gitlab.inf.utfsm.cl/mveliz/inf236-2023-1-par201-grupo-1 el proyecto en formato .zip.
 
-Start server:
+2. Descomprimir la carpeta inf236-2023-1-par201-grupo-1-main.zip.
+
+3. Una vez descomprimida la carpeta, abrir una instancia de alguna terminal o consola del sistema y ejecutar los siguientes comandos: 
+
 ```
-cd mern/server
-npm install
-npm start
+$ cd ~/inf236-2023-1-par201-grupo-1-main/server
+$ npm install
+$ npm start
 ```
 
-Start Web server
+4. Abrir otra instacia de terminal o consola y ejecutar los siguientes comandos:
 ```
-cd mern/client
-npm install
-npm start
+$ cd ~/inf236-2023-1-par201-grupo-1-main/client
+$ npm install
+$ npm start
 ```
+5. Una vez ejecutados estos comandos la aplicación de ingreso de pacientes se ejecutará en el navegador web del PC.
