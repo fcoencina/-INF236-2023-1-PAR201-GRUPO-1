@@ -1,5 +1,7 @@
 
 const { MongoClient } = require("mongodb");
+//const mongoose = require('mongoose');
+
 const Db = process.env.ATLAS_URI;
 const client = new MongoClient(Db, {
   useNewUrlParser: true,
@@ -16,6 +18,8 @@ module.exports = {
       {
         _db = db.db("employees");
         console.log("Successfully connected to MongoDB."); 
+        // Pasar la instancia de MongoClient a Mongoose
+        //mongoose.connect(client);
       }
       return callback(err);
          });
