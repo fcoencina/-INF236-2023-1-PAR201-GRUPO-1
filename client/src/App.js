@@ -5,18 +5,20 @@ import { Route, Routes } from "react-router-dom";
  
 // We import all the components we need in our app
 import Navbar from "./components/navbar";
-import RecordList from "./components/recordList";
-import Edit from "./components/edit";
-import Create from "./components/create";
+import PacientsList from "./components/pacientsList";
+import EditPacient from "./components/editPacient";
+import CreatePacient from "./components/createPacient";
+import Search from "./components/search";
  
 const App = () => {
  return (
    <div>
      <Navbar />
      <Routes>
-       <Route exact path="/" element={<RecordList/>}/>
-       <Route path="/edit/:id" element={<Edit/>}/>
-       <Route path="/create" element={<Create/>}/>
+       <Route exact path="/" element={<PacientsList/>}/>
+       <Route path="/edit/:id" element={<EditPacient/>}/>
+       <Route path="/create" element={<CreatePacient/>}/>
+       <Route path="/search" element={<Search/>}/>
      </Routes>
    </div>
  );

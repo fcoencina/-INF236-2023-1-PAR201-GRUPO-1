@@ -1,0 +1,44 @@
+
+//Add
+###
+POST http://localhost:5000/pacient/add HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Prueba3",
+    "rut": "12345678-9",
+    "f_nacimiento": "2001/05/20",
+    "sexo": "Masculino",
+    "direccion": "10",
+    "comuna": "San Joaquin",
+    "movil": "+56911111111",
+    "prevision": "Fonasa"
+}
+
+//getAll
+###
+GET http://localhost:5000/pacient HTTP/1.1
+
+//getOne
+###
+GET http://localhost:5000/pacient/6466867096382f1b240519f5 HTTP/1.1
+
+//update
+###
+PUT  http://localhost:5000/upacient/6466867096382f1b240519f5 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Updateando 1",
+    "rut": "12345678-9",
+    "f_nacimiento": "2001/05/20",
+    "sexo": "Masculino",
+    "direccion": "10",
+    "comuna": "San Joaquin",
+    "movil": "+56911111111",
+    "prevision": "Fonasa"
+}
+
+//delete
+###
+DELETE http://localhost:5000/delete/64667f5a96382f1b240519ee HTTP/1.1

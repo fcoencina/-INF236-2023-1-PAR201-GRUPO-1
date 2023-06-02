@@ -36,6 +36,11 @@ export default function Navbar() {
               </NavLink>
             </li>
             <li className="nav-item">
+              <NavLink className="nav-link" to="/search">
+                Buscar Paciente
+              </NavLink>
+            </li>
+            <li className="nav-item">
               <NavLink className="nav-link" to="/create">
                 Ingresar Paciente
               </NavLink>
