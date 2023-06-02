@@ -1,7 +1,9 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
+import ReactDOM from 'react-dom';
 import Axios from 'axios';
 import { Link } from "react-router-dom";
+import MyPDF from './pdf';
 
 const Record = (props) => (
   <tr>
@@ -14,15 +16,23 @@ const Record = (props) => (
     <td>{props.record.movil}</td>
     <td>{props.record.prevision}</td>
     <td>
-      <Link className="btn btn-link" to={`/edit/${props.record._id}`}>Editar</Link> |
-      <button className="btn btn-link"
+      <Link className="btn btn-link" to={`/edit/${props.record._id}`}>Editar</Link>
+      <Link className="btn btn-link" onClick={() => handleOpenPDF(props.record)}>Ver ficha</Link>
+      {/*<button className="btn btn-link"
         onClick={() => {
           props.deletePacient(props.record._id);
         }}
-      >Borrar</button>
+      >Borrar</button>*/}
     </td>
   </tr>
 );
+
+const handleOpenPDF = (pacient) => {
+  const win = window.open('', '_blank');
+  win.document.write('<html><body><div id="pdf-container"></div></body></html>');
+
+  ReactDOM.render(<MyPDF formData={pacient} />, win.document.getElementById('pdf-container'));
+};
 
 function Search() {
   const [busqueda, setBusqueda] = useState("");
@@ -33,19 +43,20 @@ function Search() {
       return (
         <Record
           record={pacient}
-          deletePacient={() => deletePacient(pacient._id)}
+          //deletePacient={() => deletePacient(pacient._id)}
           key={pacient._id}
         />
       );
     });
   }
-
+  /*
   async function deletePacient(id) {
     await Axios.delete(`http://localhost:5000/delete/${id}`);
 
     const newPacients = getBusqueda.filter((el) => el._id !== id);
     setgetBusqueda(newPacients);
   }
+  */
 
   async function search(value) {
     setBusqueda(value);
@@ -65,7 +76,7 @@ function Search() {
   }
 
   return (
-    <div style={{ marginTop: "150px" }}>
+    <div style={{ marginTop: "150px", marginRight: "20px", marginLeft: "20px" }}>
       <form class="d-flex">
         <input
           className="form-control me-sm-2"
@@ -83,10 +94,10 @@ function Search() {
             <th>R.U.T</th>
             <th>Fecha de nacimiento</th>
             <th>Sexo</th>
-            <th>Direccion</th>
+            <th>Dirección</th>
             <th>Comuna</th>
-            <th>Movil</th>
-            <th>Prevision</th>
+            <th>Móvil</th>
+            <th>Previsión</th>
           </tr>
         </thead>
         <tbody>{recordList()}</tbody>

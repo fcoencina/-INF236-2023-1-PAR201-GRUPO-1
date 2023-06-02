@@ -14,12 +14,12 @@ const Record = (props) => (
       <td>{props.record.movil}</td>
       <td>{props.record.prevision}</td>
       <td>
-        <Link className="btn btn-link" to={`/edit/${props.record._id}`}>Editar</Link> |
-        <button className="btn btn-link"
+        <Link className="btn btn-link" to={`/edit/${props.record._id}`}>Editar</Link>
+        {/*<button className="btn btn-link"
           onClick={() => {
             props.deletePacient(props.record._id);
           }}
-        >Borrar</button>
+        >Borrar</button>*/}
       </td>
     </tr>
 );
@@ -56,7 +56,7 @@ const PacientList = () => {
   }
 
   return (
-    <div style={{marginTop: "110px"}}>
+    <div style={{marginTop: "110px", marginRight: "20px", marginLeft: "20px"}}>
       <br></br>
       <br></br>
       <h3>Pacientes recientes</h3>
@@ -67,10 +67,10 @@ const PacientList = () => {
             <th>R.U.T</th>
             <th>Fecha de nacimiento</th>
             <th>Sexo</th>
-            <th>Direccion</th>
+            <th>Dirección</th>
             <th>Comuna</th>
-            <th>Movil</th>
-            <th>Prevision</th>
+            <th>Móvil</th>
+            <th>Previsión</th>
           </tr>
         </thead>
         <tbody>{recordList()}</tbody>
