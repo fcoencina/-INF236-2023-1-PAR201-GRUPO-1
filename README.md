@@ -9,11 +9,11 @@ Este es el repositorio del *Grupo 1*, cuyos integrantes son:
 * Ayudante: **Maciel Ripetti**
 
 ## Wiki
-* [Enlace al Diagrama de contexto](https://gitlab.inf.utfsm.cl/mveliz/inf236-2023-1-par201-grupo-1/-/wikis/Diagrama-de-Contexto)
-* [Enlace al Modelo de Dominio](https://gitlab.inf.utfsm.cl/mveliz/inf236-2023-1-par201-grupo-1/-/wikis/Modelo-de-Dominio)
-* [Enlace a los Diagramas de Secuencia](https://gitlab.inf.utfsm.cl/mveliz/inf236-2023-1-par201-grupo-1/-/wikis/Diagramas-de-Secuencia)
-* [Enlace a Wiki de Entrega 4](https://gitlab.inf.utfsm.cl/mveliz/inf236-2023-1-par201-grupo-1/-/wikis/Entrega-4)
-* [Enlace Wiki](https://gitlab.inf.utfsm.cl/mveliz/inf236-2023-1-par201-grupo-1/-/wikis/Wiki-INF236)
+* [Enlace al Diagrama de contexto](https://github.com/fcoencina/INF236-2023-1-PAR201-GRUPO-1/wiki/Diagrama-de-Contexto)
+* [Enlace al Modelo de Dominio](https://github.com/fcoencina/INF236-2023-1-PAR201-GRUPO-1/wiki/Modelo-de-Dominio)
+* [Enlace a los Diagramas de Secuencia](https://github.com/fcoencina/INF236-2023-1-PAR201-GRUPO-1/wiki/Diagramas-de-Secuencia)
+* [Enlace a Wiki de Entrega 4](https://github.com/fcoencina/INF236-2023-1-PAR201-GRUPO-1/wiki/Entrega-4)
+* [Enlace Wiki](https://github.com/fcoencina/INF236-2023-1-PAR201-GRUPO-1/wiki)
 
 ## Videos
 
@@ -92,7 +92,7 @@ Como usuario del servicio de urgencia de salud pública (SAPU), quiero que los m
 
 `Para ejecutar la aplicación correctamente es necesario tener instalado previamente Node.js junto con su gestor de paquetes(npm).`
 
-1. Descargar desde el repositorio https://gitlab.inf.utfsm.cl/mveliz/inf236-2023-1-par201-grupo-1 el proyecto en formato .zip.
+1. Descargar desde el repositorio https://github.com/fcoencina/INF236-2023-1-PAR201-GRUPO-1 el proyecto en formato .zip.
 
 2. Descomprimir la carpeta inf236-2023-1-par201-grupo-1-main.zip.
 
