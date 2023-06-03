@@ -94,19 +94,19 @@ Como usuario del servicio de urgencia de salud pública (SAPU), quiero que los m
 
 1. Descargar desde el repositorio https://github.com/fcoencina/INF236-2023-1-PAR201-GRUPO-1 el proyecto en formato .zip.
 
-2. Descomprimir la carpeta inf236-2023-1-par201-grupo-1-main.zip.
+2. Descomprimir la carpeta INF236-2023-1-PAR201-Grupo-1-main.zip.
 
 3. Una vez descomprimida la carpeta, abrir una instancia de alguna terminal o consola del sistema y ejecutar los siguientes comandos: 
 
 ```
-$ cd ~/inf236-2023-1-par201-grupo-1-main/server
+$ cd ~/INF236-2023-1-PAR201-GRUPO-1-main/server
 $ npm install
 $ npm start
 ```
 
 4. Abrir otra instacia de terminal o consola y ejecutar los siguientes comandos:
 ```
-$ cd ~/inf236-2023-1-par201-grupo-1-main/client
+$ cd ~/INF236-2023-1PAR-201-GRUPO-1-main/client
 $ npm install
 $ npm start
 ```
