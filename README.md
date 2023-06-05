@@ -13,6 +13,7 @@ Este es el repositorio del *Grupo 1*, cuyos integrantes son:
 * [Enlace al Modelo de Dominio](https://github.com/fcoencina/INF236-2023-1-PAR201-GRUPO-1/wiki/Modelo-de-Dominio)
 * [Enlace a los Diagramas de Secuencia](https://github.com/fcoencina/INF236-2023-1-PAR201-GRUPO-1/wiki/Diagramas-de-Secuencia)
 * [Enlace a Wiki de Entrega 4](https://github.com/fcoencina/INF236-2023-1-PAR201-GRUPO-1/wiki/Entrega-4)
+* [Enlace a Wiki de Entrega 5](https://github.com/fcoencina/INF236-2023-1-PAR201-GRUPO-1/wiki/Entrega-5)
 * [Enlace Wiki](https://github.com/fcoencina/INF236-2023-1-PAR201-GRUPO-1/wiki)
 
 ## Videos
