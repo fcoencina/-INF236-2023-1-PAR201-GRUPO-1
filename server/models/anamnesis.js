@@ -1,36 +1,29 @@
 
 const mongoose = require("mongoose");
 
-const pacientSchema = mongoose.Schema({
-    name: {
+const anamnesisSchema = mongoose.Schema({
+    paciente: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "pacient",
+      required: true
+    },
+    fecha_hora:{
         type: String,
         required: false
     },
-    rut: {
+    funcionario:{
         type: String,
         required: false
     },
-    f_nacimiento: {
+    explo_fisica:{
         type: String,
         required: false
     },
-    sexo: {
+    diagnostico:{
         type: String,
         required: false
     },
-    direccion: {
-        type: String,
-        required: false
-    },
-    comuna: {
-        type: String,
-        required: false
-    },
-    movil: {
-        type: String,
-        required: false
-    },
-    prevision: {
+    diagCIE_10:{
         type: String,
         required: false
     },
@@ -38,7 +31,7 @@ const pacientSchema = mongoose.Schema({
         type: Date,
         default: Date.now
     }
-}, {collection: "pacients"});
+  }, { collection: "anamnesis" });
 
                             //nombre con el q llamo, schema
-module.exports = mongoose.model("pacient", pacientSchema);
+module.exports = mongoose.model("anamnesis", anamnesisSchema);

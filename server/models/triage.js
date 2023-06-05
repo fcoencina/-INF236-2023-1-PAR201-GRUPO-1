@@ -1,36 +1,33 @@
 
 const mongoose = require("mongoose");
 
-const pacientSchema = mongoose.Schema({
-    name: {
+const triageSchema = mongoose.Schema({
+    paciente: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "pacient",
+      required: true
+    },
+    remitido_por:{
         type: String,
         required: false
     },
-    rut: {
+    centro_remitente:{
         type: String,
         required: false
     },
-    f_nacimiento: {
+    motivo_consulta:{
         type: String,
         required: false
     },
-    sexo: {
+    signos_vitales:{
         type: String,
         required: false
     },
-    direccion: {
+    fecha_hora:{
         type: String,
         required: false
     },
-    comuna: {
-        type: String,
-        required: false
-    },
-    movil: {
-        type: String,
-        required: false
-    },
-    prevision: {
+    categorizaciones:{
         type: String,
         required: false
     },
@@ -38,7 +35,7 @@ const pacientSchema = mongoose.Schema({
         type: Date,
         default: Date.now
     }
-}, {collection: "pacients"});
+  }, { collection: "triages" });
 
                             //nombre con el q llamo, schema
-module.exports = mongoose.model("pacient", pacientSchema);
+module.exports = mongoose.model("triage", triageSchema);

@@ -8,6 +8,8 @@ app.use(express.json());
 // get routes
 app.use(require("./routes/record"));
 app.use(require("./routes/pacient"));
+app.use(require("./routes/triage"));
+app.use(require("./routes/anamnesis"));
 // get driver connection
 const dbo = require("./db/conn");
 
