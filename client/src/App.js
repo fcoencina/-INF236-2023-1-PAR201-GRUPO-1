@@ -5,10 +5,12 @@ import { Route, Routes } from "react-router-dom";
  
 // We import all the components we need in our app
 import Navbar from "./components/navbar";
-import PacientsList from "./components/pacientsList";
-import EditPacient from "./components/editPacient";
-import CreatePacient from "./components/createPacient";
+import PacientsList from "./ingreso/pacientsList";
+import CreatePacient from "./ingreso/createPacient";
+import EditPacient from "./ingreso/editPacient";
 import Search from "./components/search";
+import EditTriage from './triage/editTriage';
+import TriagesList from './triage/triagesList';
  
 const App = () => {
  return (
@@ -16,9 +18,11 @@ const App = () => {
      <Navbar />
      <Routes>
        <Route exact path="/" element={<PacientsList/>}/>
-       <Route path="/edit/:id" element={<EditPacient/>}/>
-       <Route path="/create" element={<CreatePacient/>}/>
+       <Route path="/createP" element={<CreatePacient/>}/>
+       <Route path="/editP/:id" element={<EditPacient/>}/>
        <Route path="/search" element={<Search/>}/>
+       <Route path="/Tlist" element={<TriagesList/>}/>
+       <Route path="/editT/:pacient_id" element={<EditTriage/>}/>
      </Routes>
    </div>
  );

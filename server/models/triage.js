@@ -2,10 +2,20 @@
 const mongoose = require("mongoose");
 
 const triageSchema = mongoose.Schema({
-    paciente: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "pacient",
-      required: true
+    paciente:{
+        id:{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "pacient",
+            required: true
+        },
+        name:{
+            type: String,
+            required: false
+        },
+        rut:{
+            type: String,
+            required: false
+        }
     },
     remitido_por:{
         type: String,

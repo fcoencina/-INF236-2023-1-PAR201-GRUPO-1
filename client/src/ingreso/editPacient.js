@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router";
 import Axios from 'axios';
@@ -12,7 +13,6 @@ export default function Edit() {
     comuna: "",
     movil: "",
     prevision: "",
-    records: [],
   });
   const params = useParams();
   const navigate = useNavigate();

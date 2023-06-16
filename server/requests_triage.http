@@ -5,7 +5,11 @@ POST http://localhost:5000/triage/add HTTP/1.1
 Content-Type: application/json
 
 {
-    "paciente": "647bc2b7e7c0e11a2b51b4c1",
+    "paciente": {
+        "id": "647bc2b7e7c0e11a2b51b4c1",
+        "name": "Prueba",
+        "rut": "Prueba"
+    },
     "remitido_por": "enfermero gonzalo",
     "centro_remitente": "2001/05/20",
     "motivo_consulta": "posible contagio covid-19",
@@ -20,21 +24,22 @@ GET http://localhost:5000/triage HTTP/1.1
 
 //getOne
 ###
-GET http://localhost:5000/triage/647d288cfab5a54ecb9bd883 HTTP/1.1
+GET http://localhost:5000/triage/647fbe3f8aac040d368aade8 HTTP/1.1
 
 //update
 ###
-PUT  http://localhost:5000/utriage/647d288cfab5a54ecb9bd883 HTTP/1.1
+PUT  http://localhost:5000/utriage/647fbe3f8aac040d368aade8 HTTP/1.1
 Content-Type: application/json
 
 {
-    "remitido_por": "enfermero pablo",
+    "remitido_por": "enfermero pancho",
     "centro_remitente": "2001/05/20",
     "motivo_consulta": "posible contagio covid-19",
     "signos_vitales": "signos",
     "fecha_hora": "06/07/2023",
     "categorizaciones": "C3"
 }
+
 
 //delete
 ###

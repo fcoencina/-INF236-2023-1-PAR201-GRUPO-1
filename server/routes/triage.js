@@ -10,7 +10,11 @@ const router = express.Router();
 router.post("/triage/add", (req, res) => {
     //Creamos un triage
     const triage = triageSchema({
-        paciente: req.body.paciente,
+        paciente: {
+            id: req.body.paciente.id,
+            name: req.body.paciente.name,
+            rut: req.body.paciente.rut
+        },
         remitido_por: req.body.remitido_por,
         centro_remitente: req.body.centro_remitente,
         motivo_consulta: req.body.motivo_consulta,
@@ -36,22 +40,30 @@ router.get("/triage", (req, res) => {
 });
 
 //get a user
-router.get("/triage/:id", (req, res) => {
-    const {id} = req.params;
+router.get("/triage/:pacient_id", (req, res) => {
+    const {pacient_id} = req.params;
     triageSchema
-    .findById(id)
+    .findOne({"paciente.id":pacient_id})
     .then((data) => res.json(data))
     .catch((Error) => res.json({message: Error}));
 });
 
 //update user
-router.put("/utriage/:id", (req, res) => {
-    const {id} = req.params;
-    const {remitido_por, centro_remitente, motivo_consulta, signos_vitales,
-        fecha_hora, categorizaciones} = req.body;
+router.put("/utriage/:pacient_id", (req, res) => {
+    const {pacient_id} = req.params;
+    const {remitido_por, centro_remitente, 
+    motivo_consulta, signos_vitales, fecha_hora, categorizaciones } = req.body;
     triageSchema
-    .updateOne({_id: id}, {$set: {remitido_por, centro_remitente, motivo_consulta, signos_vitales,
-        fecha_hora, categorizaciones}})
+    .updateOne({ "paciente.id": pacient_id }, {$set: {
+            remitido_por,
+            centro_remitente,
+            motivo_consulta,
+            signos_vitales,
+            fecha_hora,
+            categorizaciones
+          }
+        }
+    )
     .then((data) => res.json(data))
     .catch((Error) => res.json({message: Error}));
 });
