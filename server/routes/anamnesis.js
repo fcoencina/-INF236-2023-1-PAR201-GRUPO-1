@@ -35,21 +35,21 @@ router.get("/anamnesis", (req, res) => {
 });
 
 //get a user
-router.get("/anamnesis/:id", (req, res) => {
-    const {id} = req.params;
+router.get("/anamnesis/:pacient_id", (req, res) => {
+    const {pacient_id} = req.params;
     anamnesisSchema
-    .findById(id)
+    .findOne({"paciente.id":pacient_id})
     .then((data) => res.json(data))
     .catch((Error) => res.json({message: Error}));
 });
 
 //update user
-router.put("/uanamnesis/:id", (req, res) => {
-    const {id} = req.params;
-    const {paciente, fecha_hora, funcionario, explo_fisica,
+router.put("/uanamnesis/:pacient_id", (req, res) => {
+    const {pacient_id} = req.params;
+    const {fecha_hora, funcionario, explo_fisica,
         diagnostico, diagCIE_10} = req.body;
     anamnesisSchema
-    .updateOne({_id: id}, {$set: {paciente, fecha_hora, funcionario, explo_fisica,
+    .updateOne({"paciente.id": pacient_id}, {$set: {fecha_hora, funcionario, explo_fisica,
         diagnostico, diagCIE_10}})
     .then((data) => res.json(data))
     .catch((Error) => res.json({message: Error}));

@@ -31,38 +31,51 @@ export default function CreatePacient() {
 
     async function onSubmit(e) {
         e.preventDefault();
-      
+
         const res = await Axios.post("http://localhost:5000/pacient/add", form);
-      
+
         const triage = {
-          paciente: {
-            id: res.data._id, // Asignar el valor de res.data._id al atributo id del paciente en triage
-            name: form.name,
-            rut: form.rut
-          },
-          remitido_por: "",
-          centro_remitente: "",
-          motivo_consulta: "",
-          signos_vitales: "",
-          fecha_hora: "",
-          categorizaciones: ""
+            paciente: {
+                id: res.data._id, // Asignar el valor de res.data._id al atributo id del paciente en triage
+                name: form.name,
+                rut: form.rut
+            },
+            remitido_por: "",
+            centro_remitente: "",
+            motivo_consulta: "",
+            signos_vitales: "",
+            fecha_hora: "",
+            categorizaciones: ""
         };
-      
-        const res2 = await Axios.post("http://localhost:5000/triage/add", triage);   
-        //console.log(res2.data);       
-      
+
+        const anamnesis = {
+            paciente: {
+                id: res.data._id, // Asignar el valor de res.data._id al atributo id del paciente en anamnesis
+                name: form.name,
+                rut: form.rut
+            },
+            fecha_hora: "",
+            funcionario: "",
+            explo_fisica: "",
+            diagnostico: "",
+            diagCIE_10: ""
+        };
+
+        await Axios.post("http://localhost:5000/triage/add", triage);
+        await Axios.post("http://localhost:5000/anamnesis/add", anamnesis);      
+
         setForm({
-          name: "",
-          rut: "",
-          f_nacimiento: "",
-          sexo: "",
-          direccion: "",
-          comuna: "",
-          movil: "",
-          prevision: ""
+            name: "",
+            rut: "",
+            f_nacimiento: "",
+            sexo: "",
+            direccion: "",
+            comuna: "",
+            movil: "",
+            prevision: ""
         });
         navigate("/");
-      }      
+    }
 
     return (
         <form onSubmit={onSubmit} style={{ marginTop: "150px", marginBottom: "30px", marginRight: "30px", marginLeft: "30px" }}>

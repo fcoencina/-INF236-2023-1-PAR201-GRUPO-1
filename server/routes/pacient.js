@@ -2,6 +2,8 @@
 //CRUD pacients
 const express = require("express");
 const pacientSchema = require("../models/pacient");
+const triageSchema = require("../models/triage");
+const anamnesisSchema = require("../models/anamnesis");
 
 //Aquí se crea un enrutador de pacient
 const router = express.Router();
@@ -59,16 +61,21 @@ router.get("/pacient/:id", (req, res) => {
 });
 
 //update user
-router.put("/upacient/:id", (req, res) => {
-    const {id} = req.params;
-    const {name, rut, f_nacimiento, sexo, direccion, comuna, 
-        movil, prevision} = req.body;
-    pacientSchema
-    .updateOne({_id: id}, {$set: {name, rut, f_nacimiento, sexo, 
-    direccion, comuna, movil, prevision}})
-    .then((data) => res.json(data))
-    .catch((Error) => res.json({message: Error}));
-})
+router.put("/upacient/:id", async (req, res) => {
+    try {
+      const { id } = req.params;
+      const { name, rut, f_nacimiento, sexo, direccion, comuna, movil, prevision } = req.body;
+  
+      await pacientSchema.updateOne({ _id: id }, { name, rut, f_nacimiento, sexo, direccion, comuna, movil, prevision });
+      await triageSchema.updateMany({ "paciente.id": id }, { "paciente.name": name, "paciente.rut": rut });
+      await anamnesisSchema.updateMany({ "paciente.id": id }, { "paciente.name": name, "paciente.rut": rut });
+  
+      res.status(200).json({ message: "Paciente actualizado correctamente" });
+    } catch (error) {
+      res.status(500).json({ message: "Error al actualizar el paciente" });
+    }
+});
+  
 
 //delete user
 router.delete("/delete/:id", (req, res) => {

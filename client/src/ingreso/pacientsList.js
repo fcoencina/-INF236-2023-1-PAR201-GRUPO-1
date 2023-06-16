@@ -14,8 +14,9 @@ const Record = (props) => (
       <td>{props.record.movil}</td>
       <td>{props.record.prevision}</td>
       <td>
-        <Link className="btn btn-link" to={`/editP/${props.record._id}`}>Editar info.</Link>
+        <Link className="btn btn-link" to={`/editP/${props.record._id}`}>Editar info</Link>
         <Link className="btn btn-link" to={`/editT/${props.record._id}`}>Triage</Link>
+        <Link className="btn btn-link" to={`/editA/${props.record._id}`}>Anamnesis</Link>
         {/*<button className="btn btn-link"
           onClick={() => {
             props.deletePacient(props.record._id);

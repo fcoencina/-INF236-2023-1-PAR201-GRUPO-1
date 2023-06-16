@@ -16,7 +16,7 @@ const Record = (props) => (
     <td>{props.record.movil}</td>
     <td>{props.record.prevision}</td>
     <td>
-      <Link className="btn btn-link" to={`/edit/${props.record._id}`}>Editar</Link>
+      <Link className="btn btn-link" to={`/editP/${props.record._id}`}>Editar</Link>
       <Link className="btn btn-link" onClick={() => handleOpenPDF(props.record)}>Ver ficha</Link>
       {/*<button className="btn btn-link"
         onClick={() => {
