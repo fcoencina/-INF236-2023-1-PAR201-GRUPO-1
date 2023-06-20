@@ -1,5 +1,5 @@
 
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import Axios from 'axios';
 import { Link } from "react-router-dom";
@@ -27,11 +27,22 @@ const Record = (props) => (
   </tr>
 );
 
-const handleOpenPDF = (pacient) => {
+const handleOpenPDF = async (pacient) => {
+  const res1 = Axios.get(`http://localhost:5000/triage/${pacient._id}`);
+  const res2 = Axios.get(`http://localhost:5000/anamnesis/${pacient._id}`);
+
+  const [T_res, A_res] = await Promise.all([res1, res2]);
+
+  const combinedData = {
+    data1: pacient,
+    data2: T_res.data,
+    data3: A_res.data
+  };
+
   const win = window.open('', '_blank');
   win.document.write('<html><body><div id="pdf-container"></div></body></html>');
 
-  ReactDOM.render(<MyPDF formData={pacient} />, win.document.getElementById('pdf-container'));
+  ReactDOM.render(<MyPDF formData={combinedData} />, win.document.getElementById('pdf-container'));
 };
 
 function Search() {

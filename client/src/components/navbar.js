@@ -36,12 +36,12 @@ export default function Navbar() {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/Tlist">
+              <NavLink className="nav-link" to="#">
                 Triage
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/">
+              <NavLink className="nav-link" to="#">
                 Anamnesis
               </NavLink>
             </li>

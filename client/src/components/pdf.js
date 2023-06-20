@@ -59,55 +59,55 @@ const MyPDF = ({ formData }) => {
             <Text>DATOS DEL PACIENTE</Text>
           </View>
           <View style={styles.left_section}>
-            <Text>Nombre: {formData.name}</Text>
+            <Text>Nombre: {formData.data1.name}</Text>
           </View>
           <View style={styles.left_section}>
-            <Text>R.U.T: {formData.rut}</Text>
+            <Text>R.U.T: {formData.data1.rut}</Text>
           </View>
           <View style={styles.left_section}>
-            <Text>Fecha nacimiento: {formData.f_nacimiento}</Text>
+            <Text>Fecha nacimiento: {formData.data1.f_nacimiento}</Text>
           </View>
           <View style={styles.left_section}>
-            <Text>Sexo: {formData.sexo}</Text>
+            <Text>Sexo: {formData.data1.sexo}</Text>
           </View>
           <View style={styles.left_section}>
-            <Text>Dirección: {formData.direccion}</Text>
+            <Text>Dirección: {formData.data1.direccion}</Text>
           </View>
           <View style={styles.left_section}>
-            <Text>Comuna: {formData.comuna}</Text>
+            <Text>Comuna: {formData.data1.comuna}</Text>
           </View>
           <View style={styles.rightUp_section}>
-            <Text>Previsión: {formData.prevision}</Text>
+            <Text>Previsión: {formData.data1.prevision}</Text>
           </View>
           <View style={styles.title_section}>
             <Text>DATOS DE INGRESO DEL PACIENTE</Text>
           </View>
           <View style={styles.left_section}>
-            <Text>Reemitido por:</Text>
+            <Text>Reemitido por: {formData.data2.remitido_por}</Text>
           </View>
           <View style={styles.left_section}>
-            <Text>Centro remitente:</Text>
+            <Text>Centro remitente: {formData.data2.centro_remitente}</Text>
           </View>
           <View style={styles.title_section}>
             <Text>MOTIVO CONSULTA</Text>
           </View>
           <View style={styles.left_section}>
-            <Text>{"Aquí va un parrafito"}</Text>
+            <Text>{formData.data2.motivo_consulta}</Text>
           </View>
           <View style={styles.title_section}>
             <Text>Registro de Signos Vitales:</Text>
           </View>
           <View style={styles.left_section}>
-            <Text>{"Aquí va una tablita"}</Text>
+            <Text>{formData.data2.signos_vitales}</Text>
           </View>
           <View style={styles.title_section}>
             <Text>FECHA/HORA ATENCIÓN</Text>
           </View>
           <View style={styles.left_section}>
-            <Text>{"Aquí va..."}</Text>
+            <Text>{formData.data2.fecha_hora}</Text>
           </View>
           <View style={[styles.rightDown_section, {top: "29%", fontFamily: 'Helvetica-Bold'}]}>
-            <Text>Categorizaciones:</Text>
+            <Text>Categorizaciones: {formData.data2.categorizaciones}</Text>
           </View>
           <View style={[styles.rightDown_section, {top: "31%", fontFamily: 'Helvetica'}]}>
             <Text>Aquí va una tablita</Text>
@@ -119,10 +119,10 @@ const MyPDF = ({ formData }) => {
             <Text>Anamnesis-Evolución</Text>
           </View>
           <View style={styles.title_section}>
-            <Text>Fecha/Hora:</Text>
+            <Text>Fecha/Hora: {formData.data3.fecha_hora}</Text>
           </View>
           <View style={styles.title_section}>
-            <Text>Funcionario:</Text>
+            <Text>Funcionario: {formData.data3.funcionario}</Text>
           </View>
           <View style={styles.left_section}>
             <Text>{"Aquí van como los síntomas(?)"}</Text>
@@ -131,16 +131,16 @@ const MyPDF = ({ formData }) => {
             <Text>Exploración Física</Text>
           </View>
           <View style={styles.left_section}>
-            <Text>{"Aquí van exámenes(?)"}</Text>
+            <Text>{formData.data3.explo_fisica}</Text>
           </View>
           <View style={styles.title_section}>
             <Text>Diagnósticos:</Text>
           </View>
           <View style={styles.title_section}>
-            <Text>Diagnóstico(texto):</Text>
+            <Text>Diagnóstico(texto): {formData.data3.diagnostico}</Text>
           </View>
           <View style={styles.title_section}>
-            <Text>Clasificación Diagnóstica CIE-10:</Text>
+            <Text>Clasificación Diagnóstica CIE-10: {formData.data3.diagCIE_10}</Text>
           </View>
         </Page>
       </Document>
