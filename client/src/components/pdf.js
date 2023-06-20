@@ -12,6 +12,25 @@ const styles = StyleSheet.create({
   left_section: {
     marginBottom: 10,
   },
+  rightUp_section: {
+    position: 'absolute',
+    height: 100,
+    top: '9%',
+    left: "55%",
+    //backgroundColor: 'red',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 10,
+  },
+  rightDown_section: {
+    position: 'absolute',
+    height: 100,
+    left: "50%",
+    //backgroundColor: 'red',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 10,
+  },
   title: {
     alignSelf: "center",
     textDecoration: 'underline', //subrayado
@@ -57,6 +76,9 @@ const MyPDF = ({ formData }) => {
           <View style={styles.left_section}>
             <Text>Comuna: {formData.comuna}</Text>
           </View>
+          <View style={styles.rightUp_section}>
+            <Text>Previsión: {formData.prevision}</Text>
+          </View>
           <View style={styles.title_section}>
             <Text>DATOS DE INGRESO DEL PACIENTE</Text>
           </View>
@@ -84,20 +106,32 @@ const MyPDF = ({ formData }) => {
           <View style={styles.left_section}>
             <Text>{"Aquí va..."}</Text>
           </View>
+          <View style={[styles.rightDown_section, {top: "29%", fontFamily: 'Helvetica-Bold'}]}>
+            <Text>Categorizaciones:</Text>
+          </View>
+          <View style={[styles.rightDown_section, {top: "31%", fontFamily: 'Helvetica'}]}>
+            <Text>Aquí va una tablita</Text>
+          </View>
           <View style={styles.title_section}>
             <Text>DATOS DE LA ATENCIÓN MÉDICA</Text>
           </View>
-          <View style={styles.left_section}>
+          <View style={styles.title_section}>
             <Text>Anamnesis-Evolución</Text>
           </View>
-          <View style={styles.left_section}>
-            <Text>Fecha/Hora</Text>
+          <View style={styles.title_section}>
+            <Text>Fecha/Hora:</Text>
+          </View>
+          <View style={styles.title_section}>
+            <Text>Funcionario:</Text>
           </View>
           <View style={styles.left_section}>
-            <Text>Funcionario:{"\nAquí van como los síntomas(?)"}</Text>
+            <Text>{"Aquí van como los síntomas(?)"}</Text>
+          </View>
+          <View style={styles.title_section}>
+            <Text>Exploración Física</Text>
           </View>
           <View style={styles.left_section}>
-            <Text>Exploración Física:{"\nAquí van exámenes(?)"}</Text>
+            <Text>{"Aquí van exámenes(?)"}</Text>
           </View>
           <View style={styles.title_section}>
             <Text>Diagnósticos:</Text>

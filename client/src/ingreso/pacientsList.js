@@ -4,26 +4,26 @@ import Axios from 'axios';
 import { Link } from "react-router-dom";
 
 const Record = (props) => (
-    <tr>
-      <td>{props.record.name}</td>
-      <td>{props.record.rut}</td>
-      <td>{props.record.f_nacimiento}</td>
-      <td>{props.record.sexo}</td>
-      <td>{props.record.direccion}</td>
+  <tr>
+    <td>{props.record.name}</td>
+    <td>{props.record.rut}</td>
+    <td>{props.record.f_nacimiento}</td>
+    <td>{props.record.sexo}</td>
+    <td>{props.record.movil}</td>
+    {/*<td>{props.record.direccion}</td>
       <td>{props.record.comuna}</td>
-      <td>{props.record.movil}</td>
-      <td>{props.record.prevision}</td>
-      <td>
-        <Link className="btn btn-link" to={`/editP/${props.record._id}`}>Editar info</Link>
-        <Link className="btn btn-link" to={`/editT/${props.record._id}`}>Triage</Link>
-        <Link className="btn btn-link" to={`/editA/${props.record._id}`}>Anamnesis</Link>
-        {/*<button className="btn btn-link"
+<td>{props.record.prevision}</td>*/}
+    <td>
+      <Link className="btn btn-primary" to={`/editP/${props.record._id}`}>Editar info</Link>&nbsp;
+      <Link className="btn btn-primary" to={`/editT/${props.record._id}`}>Triage</Link>&nbsp;
+      <Link className="btn btn-primary" to={`/editA/${props.record._id}`}>Anamnesis</Link>
+      {/*<button className="btn btn-link"
           onClick={() => {
             props.deletePacient(props.record._id);
           }}
         >Borrar</button>*/}
-      </td>
-    </tr>
+    </td>
+  </tr>
 );
 
 const PacientList = () => {
@@ -58,7 +58,7 @@ const PacientList = () => {
   }*/
 
   return (
-    <div style={{marginTop: "110px", marginRight: "20px", marginLeft: "20px"}}>
+    <div style={{ marginTop: "110px", marginRight: "20px", marginLeft: "20px" }}>
       <br></br>
       <br></br>
       <h3>Pacientes recientes</h3>
@@ -69,10 +69,10 @@ const PacientList = () => {
             <th>R.U.T</th>
             <th>Fecha de nacimiento</th>
             <th>Sexo</th>
-            <th>Dirección</th>
-            <th>Comuna</th>
             <th>Móvil</th>
-            <th>Previsión</th>
+            {/*<th>Dirección</th>
+            <th>Comuna</th>
+  <th>Previsión</th>*/}
           </tr>
         </thead>
         <tbody>{recordList()}</tbody>
