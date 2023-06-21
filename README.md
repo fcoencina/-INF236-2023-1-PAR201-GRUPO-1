@@ -79,7 +79,7 @@ Como usuario del servicio de urgencia de salud pública (SAPU), quiero que los m
 
 2. Dado la alta cantidad de pacientes atendidos por los médicos cuando estos quieran registrar los datos en la ficha de atención electrónica entonces el sistema deberá ser fácil de usar para ellos.
 
-3. Dado que los los datos ingresados en las fichas manuales no permiten enterarnos de datos de los pacientes cuando las fichas de atención electrónica se almacenen de manera segura y confidencial, entonces podremos tener datos de atenciones previas de los pacientes.
+3. Dado que los datos ingresados en las fichas manuales no permiten enterarnos de datos de los pacientes cuando las fichas de atención electrónica se almacenen de manera segura y confidencial, entonces podremos tener datos de atenciones previas de los pacientes.
 
 ### Historia 3
 Como usuario del servicio de urgencia de salud pública (SAPU), quiero que los medicamentos que me receten sean registrados electrónicamente y que se me entregue una copia de la ficha de atención clínica, para que la atención sea más eficiente.
