@@ -14,12 +14,14 @@ Este es el repositorio del *Grupo 1*, cuyos integrantes son:
 * [Enlace a los Diagramas de Secuencia](https://github.com/fcoencina/INF236-2023-1-PAR201-GRUPO-1/wiki/Diagramas-de-Secuencia)
 * [Enlace a Wiki de Entrega 4](https://github.com/fcoencina/INF236-2023-1-PAR201-GRUPO-1/wiki/Entrega-4)
 * [Enlace a Wiki de Entrega 5](https://github.com/fcoencina/INF236-2023-1-PAR201-GRUPO-1/wiki/Entrega-5)
+* [Enlace a Wiki de Entrega 6 y 7](https://github.com/fcoencina/INF236-2023-1-PAR201-GRUPO-1/wiki/Entrega-6-y-7)
 * [Enlace Wiki](https://github.com/fcoencina/INF236-2023-1-PAR201-GRUPO-1/wiki)
 
 ## Videos
 
 * [Video Presentación Entrega 1](https://youtu.be/n5oyO6FyPAQ)
 * [Video Presentación Entrega 4](https://youtu.be/cCnYCzlATi8)
+* [Video Presentación Entrega 6 y 7]()
 
 ## Objetivos
 
