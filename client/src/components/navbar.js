@@ -41,7 +41,7 @@ export default function Navbar() {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/create">
+              <NavLink className="nav-link" to="/createP">
                 Ingresar Paciente
               </NavLink>
             </li>

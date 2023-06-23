@@ -37,7 +37,7 @@ const pacientSchema = mongoose.Schema({
     createdAt: {
         type: Date,
         default: Date.now
-      }
+    }
 }, {collection: "pacients"});
 
                             //nombre con el q llamo, schema

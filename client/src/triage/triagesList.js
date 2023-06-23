@@ -5,16 +5,10 @@ import { Link } from "react-router-dom";
 
 const Record = (props) => (
     <tr>
-      <td>{props.record.name}</td>
-      <td>{props.record.rut}</td>
-      <td>{props.record.f_nacimiento}</td>
-      <td>{props.record.sexo}</td>
-      <td>{props.record.direccion}</td>
-      <td>{props.record.comuna}</td>
-      <td>{props.record.movil}</td>
-      <td>{props.record.prevision}</td>
+      <td>{props.record.paciente}</td>
+      <td>{props.record.remitido_por}</td>
       <td>
-        <Link className="btn btn-link" to={`/edit/${props.record._id}`}>Editar</Link>
+        <Link className="btn btn-link" to={`/editT/${props.record._id}`}>Editar</Link>
         {/*<button className="btn btn-link"
           onClick={() => {
             props.deletePacient(props.record._id);
@@ -24,36 +18,36 @@ const Record = (props) => (
     </tr>
 );
 
-const PacientList = () => {
-  const [pacients, setPacients] = useState([]);
+const TriageList = () => {
+  const [triages, setTriages] = useState([]);
 
-  const getUsers = async () => {
-    const res = await Axios.get("http://localhost:5000/pacient");
-    setPacients(res.data);
+  const getTriages = async () => {
+    const res = await Axios.get("http://localhost:5000/triage");
+    setTriages(res.data);
   };
 
   useEffect(() => {
-    getUsers();
+    getTriages();
   }, []);
 
   function recordList() {
-    return pacients.map((pacient) => {
+    return triages.map((triage) => {
       return (
         <Record
-          record={pacient}
-          deletePacient={() => deletePacient(pacient._id)}
-          key={pacient._id}
+          record={triage}
+          //deletePacient={() => deletePacient(pacient._id)}
+          key={triage._id}
         />
       );
     });
   }
-
+  /*
   async function deletePacient(id) {
     await Axios.delete(`http://localhost:5000/delete/${id}`);
 
     const newPacients = pacients.filter((el) => el._id !== id);
     setPacients(newPacients);
-  }
+  }*/
 
   return (
     <div style={{marginTop: "110px", marginRight: "20px", marginLeft: "20px"}}>
@@ -65,12 +59,6 @@ const PacientList = () => {
           <tr>
             <th>Nombre</th>
             <th>R.U.T</th>
-            <th>Fecha de nacimiento</th>
-            <th>Sexo</th>
-            <th>Dirección</th>
-            <th>Comuna</th>
-            <th>Móvil</th>
-            <th>Previsión</th>
           </tr>
         </thead>
         <tbody>{recordList()}</tbody>
@@ -79,4 +67,4 @@ const PacientList = () => {
   );
 };
 
-export default PacientList;
+export default TriageList;

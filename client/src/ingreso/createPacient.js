@@ -32,7 +32,40 @@ export default function CreatePacient() {
     async function onSubmit(e) {
         e.preventDefault();
 
-        await Axios.post("http://localhost:5000/pacient/add", form);
+        const res = await Axios.post("http://localhost:5000/pacient/add", form);
+
+        const triage = {
+            paciente: {
+                id: res.data._id, // Asignar el valor de res.data._id al atributo id del paciente en triage
+                name: form.name,
+                rut: form.rut
+            },
+            remitido_por: "",
+            centro_remitente: "",
+            motivo_consulta: "",
+            signos_vitales: "",
+            fecha_hora: "",
+            categorizaciones: ""
+        };
+
+        const anamnesis = {
+            paciente: {
+                id: res.data._id, // Asignar el valor de res.data._id al atributo id del paciente en anamnesis
+                name: form.name,
+                rut: form.rut
+            },
+            fecha_hora: "",
+            funcionario: "",
+            obs: "",
+            explo_fisica: "",
+            medicamentos: "",
+            diagnostico: "",
+            diagCIE_10: ""
+        };
+
+        await Axios.post("http://localhost:5000/triage/add", triage);
+        await Axios.post("http://localhost:5000/anamnesis/add", anamnesis);      
+
         setForm({
             name: "",
             rut: "",
