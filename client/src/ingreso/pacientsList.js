@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import { Link } from "react-router-dom";
+//Para que funcione el dropdown
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 const Record = (props) => (
   <tr>
@@ -14,9 +16,16 @@ const Record = (props) => (
       <td>{props.record.comuna}</td>
 <td>{props.record.prevision}</td>*/}
     <td>
-      <Link className="btn btn-primary" to={`/editP/${props.record._id}`}>Editar info</Link>&nbsp;
-      <Link className="btn btn-primary" to={`/editT/${props.record._id}`}>Triage</Link>&nbsp;
-      <Link className="btn btn-primary" to={`/editA/${props.record._id}`}>Anamnesis</Link>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Acción
+        </button>
+        <ul class="dropdown-menu">
+          <Link className="dropdown-item" to={`/editP/${props.record._id}`}>Editar info</Link>
+          <Link className="dropdown-item" to={`/editT/${props.record._id}`}>Triage</Link>
+          <Link className="dropdown-item" to={`/editA/${props.record._id}`}>Anamnesis</Link>
+        </ul>
+      </div>
       {/*<button className="btn btn-link"
           onClick={() => {
             props.deletePacient(props.record._id);

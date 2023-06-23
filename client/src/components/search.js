@@ -16,8 +16,17 @@ const Record = (props) => (
     <td>{props.record.movil}</td>
     <td>{props.record.prevision}</td>
     <td>
-      <Link className="btn btn-link" to={`/editP/${props.record._id}`}>Editar</Link>
-      <Link className="btn btn-link" onClick={() => handleOpenPDF(props.record)}>Ver ficha</Link>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Acción
+        </button>
+        <ul class="dropdown-menu">
+          <Link className="dropdown-item" to={`/editP/${props.record._id}`}>Editar info</Link>
+          <Link className="dropdown-item" to={`/editT/${props.record._id}`}>Triage</Link>
+          <Link className="dropdown-item" to={`/editA/${props.record._id}`}>Anamnesis</Link>
+          <Link className="dropdown-item" onClick={() => handleOpenPDF(props.record)}>Ver ficha</Link>
+        </ul>
+      </div>
       {/*<button className="btn btn-link"
         onClick={() => {
           props.deletePacient(props.record._id);

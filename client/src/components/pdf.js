@@ -125,13 +125,13 @@ const MyPDF = ({ formData }) => {
             <Text>Funcionario: {formData.data3.funcionario}</Text>
           </View>
           <View style={styles.left_section}>
-            <Text>{"Aquí van como los síntomas(?)"}</Text>
+            <Text>  {"Aquí van como los síntomas(?)"}</Text>
           </View>
           <View style={styles.title_section}>
             <Text>Exploración Física</Text>
           </View>
           <View style={styles.left_section}>
-            <Text>{formData.data3.explo_fisica}</Text>
+            <Text>  {formData.data3.explo_fisica}</Text>
           </View>
           <View style={styles.title_section}>
             <Text>Diagnósticos:</Text>
