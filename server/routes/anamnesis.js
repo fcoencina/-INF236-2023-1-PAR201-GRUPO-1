@@ -13,7 +13,9 @@ router.post("/anamnesis/add", (req, res) => {
         paciente: req.body.paciente,
         fecha_hora: req.body.fecha_hora,
         funcionario: req.body.funcionario,
+        obs: req.body.obs,
         explo_fisica: req.body.explo_fisica,
+        medicamentos: req.body.medicamentos,
         diagnostico: req.body.diagnostico,
         diagCIE_10: req.body.diagCIE_10,
         createdAt: new Date()
@@ -46,11 +48,11 @@ router.get("/anamnesis/:pacient_id", (req, res) => {
 //update user
 router.put("/uanamnesis/:pacient_id", (req, res) => {
     const {pacient_id} = req.params;
-    const {fecha_hora, funcionario, explo_fisica,
-        diagnostico, diagCIE_10} = req.body;
+    const {fecha_hora, funcionario, obs, explo_fisica,
+        medicamentos, diagnostico, diagCIE_10} = req.body;
     anamnesisSchema
-    .updateOne({"paciente.id": pacient_id}, {$set: {fecha_hora, funcionario, explo_fisica,
-        diagnostico, diagCIE_10}})
+    .updateOne({"paciente.id": pacient_id}, {$set: {fecha_hora, funcionario, obs, explo_fisica, 
+        medicamentos, diagnostico, diagCIE_10}})
     .then((data) => res.json(data))
     .catch((Error) => res.json({message: Error}));
 })

@@ -25,7 +25,15 @@ const anamnesisSchema = mongoose.Schema({
         type: String,
         required: false
     },
+    obs:{
+        type: String,
+        required: false
+    },
     explo_fisica:{
+        type: String,
+        required: false
+    },
+    medicamentos:{
         type: String,
         required: false
     },
