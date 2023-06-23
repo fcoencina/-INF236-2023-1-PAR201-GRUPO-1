@@ -56,7 +56,9 @@ export default function CreatePacient() {
             },
             fecha_hora: "",
             funcionario: "",
+            obs: "",
             explo_fisica: "",
+            medicamentos: "",
             diagnostico: "",
             diagCIE_10: ""
         };

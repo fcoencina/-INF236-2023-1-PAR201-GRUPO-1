@@ -17,10 +17,10 @@ const Record = (props) => (
     <td>{props.record.prevision}</td>
     <td>
       <div class="btn-group" role="group">
-        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        <button type="button" className="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
           Acción
         </button>
-        <ul class="dropdown-menu">
+        <ul className="dropdown-menu">
           <Link className="dropdown-item" to={`/editP/${props.record._id}`}>Editar info</Link>
           <Link className="dropdown-item" to={`/editT/${props.record._id}`}>Triage</Link>
           <Link className="dropdown-item" to={`/editA/${props.record._id}`}>Anamnesis</Link>

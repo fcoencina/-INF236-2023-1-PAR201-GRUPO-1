@@ -1,7 +1,9 @@
 
 import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom';
 import Axios from 'axios';
 import { Link } from "react-router-dom";
+import MyPDF from '../components/pdf';
 //Para que funcione el dropdown
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
@@ -12,18 +14,19 @@ const Record = (props) => (
     <td>{props.record.f_nacimiento}</td>
     <td>{props.record.sexo}</td>
     <td>{props.record.movil}</td>
-    {/*<td>{props.record.direccion}</td>
-      <td>{props.record.comuna}</td>
-<td>{props.record.prevision}</td>*/}
+    <td>{props.record.direccion}</td>
+    <td>{props.record.comuna}</td>
+    <td>{props.record.prevision}</td>
     <td>
-      <div class="btn-group" role="group">
-        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      <div className="btn-group" role="group">
+        <button type="button" className="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
           Acción
         </button>
         <ul class="dropdown-menu">
           <Link className="dropdown-item" to={`/editP/${props.record._id}`}>Editar info</Link>
           <Link className="dropdown-item" to={`/editT/${props.record._id}`}>Triage</Link>
           <Link className="dropdown-item" to={`/editA/${props.record._id}`}>Anamnesis</Link>
+          <Link className="dropdown-item" onClick={() => handleOpenPDF(props.record)}>Ver ficha</Link>
         </ul>
       </div>
       {/*<button className="btn btn-link"
@@ -34,6 +37,24 @@ const Record = (props) => (
     </td>
   </tr>
 );
+
+const handleOpenPDF = async (pacient) => {
+  const res1 = Axios.get(`http://localhost:5000/triage/${pacient._id}`);
+  const res2 = Axios.get(`http://localhost:5000/anamnesis/${pacient._id}`);
+
+  const [T_res, A_res] = await Promise.all([res1, res2]);
+
+  const combinedData = {
+    data1: pacient,
+    data2: T_res.data,
+    data3: A_res.data
+  };
+
+  const win = window.open('', '_blank');
+  win.document.write('<html><body><div id="pdf-container"></div></body></html>');
+
+  ReactDOM.render(<MyPDF formData={combinedData} />, win.document.getElementById('pdf-container'));
+};
 
 const PacientList = () => {
   const [pacients, setPacients] = useState([]);
@@ -79,9 +100,9 @@ const PacientList = () => {
             <th>Fecha de nacimiento</th>
             <th>Sexo</th>
             <th>Móvil</th>
-            {/*<th>Dirección</th>
+            <th>Dirección</th>
             <th>Comuna</th>
-  <th>Previsión</th>*/}
+            <th>Previsión</th>
           </tr>
         </thead>
         <tbody>{recordList()}</tbody>

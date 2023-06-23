@@ -7,7 +7,9 @@ export default function Edit() {
     const [form, setForm] = useState({
         fecha_hora: "",
         funcionario: "",
+        obs: "",
         explo_fisica: "",
+        medicamentos: "",
         diagnostico: "",
         diagCIE_10: ""
     });
@@ -37,7 +39,9 @@ export default function Edit() {
         const editedAnamnesis = {
             fecha_hora: form.fecha_hora,
             funcionario: form.funcionario,
+            obs: form.obs,
             explo_fisica: form.explo_fisica,
+            medicamentos: form.medicamentos,
             diagnostico: form.diagnostico,
             diagCIE_10: form.diagCIE_10
         };
@@ -78,11 +82,20 @@ export default function Edit() {
                             />
                         </div>
                         <div className="form-group">
-                            <label className="col-form-label mt-4" for="inputDefault">Exploración Física</label>
-                            <input
-                                type="text"
+                            <label className="col-form-label mt-4" for="exampleFormControlTextarea1">Observaciones</label>
+                            <textarea
                                 className="form-control"
-                                placeholder="Ingrese Exploración Física"
+                                id="exampleFormControlTextarea1"
+                                placeholder="Ingrese Observaciones/Síntomas"
+                                value={form.obs}
+                                onChange={(e) => updateForm({ obs: e.target.value })}
+                            ></textarea>
+                        </div>
+                        <div className="form-group">
+                            <label className="col-form-label mt-4" for="inputDefault">Exámenes Indicados</label>
+                            <textarea
+                                className="form-control"
+                                placeholder="Ingrese Exámenes"
                                 id="inputDefault"
                                 value={form.explo_fisica}
                                 onChange={(e) => updateForm({ explo_fisica: e.target.value })}
@@ -90,6 +103,16 @@ export default function Edit() {
                         </div>
                     </div>
                     <div className="col-6">
+                        <div className="form-group">
+                            <label className="col-form-label mt-4" for="inputDefault">Medicamentos Indicados</label>
+                            <textarea
+                                className="form-control"
+                                placeholder="Ingrese Medicamentos"
+                                id="inputDefault"
+                                value={form.medicamentos}
+                                onChange={(e) => updateForm({ medicamentos: e.target.value })}
+                            />
+                        </div>
                         <div className="form-group">
                             <label className="col-form-label mt-4" for="inputDefault">Diagnóstico</label>
                             <input
