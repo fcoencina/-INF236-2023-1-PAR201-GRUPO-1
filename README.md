@@ -117,7 +117,7 @@ $ npm start
 
 ## Instrucciones de Uso de la Aplicación
 
-`Como se mencionó antes la aplicación de ejecutará en el navegador web..`
+`Como se mencionó antes la aplicación de ejecutará en el navegador web.`
 
 * En la parte superior de la pantalla hay un menú el cual tiene las siguientes pestañas de la aplicación:
 
