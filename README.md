@@ -114,3 +114,25 @@ $ npm install
 $ npm start
 ```
 5. Una vez ejecutados estos comandos la aplicación de ingreso de pacientes se ejecutará en el navegador web del PC.
+
+## Instrucciones de Uso de la Aplicación
+
+`Como se mencionó antes la aplicación de ejecutará en el navegador web.`
+
+* En la parte superior de la pantalla hay un menú el cual tiene las siguientes pestañas de la aplicación:
+
+1. Inicio: En esta pestaña es posible ver los pacientes más recientes ingresados al sistema.
+
+2. Buscar Paciente: En esta pestaña es posible buscar pacientes a través del nombre.
+
+3. Ingresar Paciente: Esta pestaña sirve para ingresar pacientes al sistema.
+
+* En las primeras dos pestañas se mostrarán los distintos pacientes que ya están en el sistema, en la parte derecha de la pantalla hay un botón de color azul el cual dice "acción", este botón desplegará cuatro distintas opciones:
+
+1. Editar Info: Este botón sirve para editar la información con la que se ingresó al paciente.
+
+2. Triage: Este botón sirve para anotar los datos que se obtienen en la Triage que se le realiza al paciente una vez ingresado.
+
+3. Anamnesis: Este botón sirve para anotar los datos de la anamnesis del paciente, en este lugar se anotan datos como exámenes o medicamentos indicados.
+
+4. Ver Ficha: Este botón sirve para generar la ficha del paciente en formato PDF.
