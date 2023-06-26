@@ -81,8 +81,7 @@ export default function Edit() {
                         </div>
                         <div className="form-group">
                             <label className="col-form-label mt-4" for="inputDefault">Motivo Consulta</label>
-                            <input
-                                type="text"
+                            <textarea
                                 className="form-control"
                                 placeholder="Ingrese Motivo Consulta"
                                 id="inputDefault"
@@ -94,8 +93,7 @@ export default function Edit() {
                     <div className="col-6">
                         <div className="form-group">
                             <label className="col-form-label mt-4" for="inputDefault">Signos Vitales</label>
-                            <input
-                                type="text"
+                            <textarea
                                 className="form-control"
                                 placeholder="Ingrese Signos Vitales"
                                 id="inputDefault"
@@ -116,14 +114,14 @@ export default function Edit() {
                         </div>
                         <div className="form-group">
                             <label className="col-form-label mt-4" for="inputDefault">Categorizaciones</label>
-                            <input
-                                type="text"
-                                className="form-control"
-                                placeholder="Ingrese Categorización"
-                                id="inputDefault"
-                                value={form.categorizaciones}
-                                onChange={(e) => updateForm({ categorizaciones: e.target.value })}
-                            />
+                            <select className="form-select" id="exampleSelect1" value={form.categorizaciones} onChange={(e) => updateForm({ categorizaciones: e.target.value })}>
+                                <option value="">Seleccione</option>
+                                <option value="C1">C1</option>
+                                <option value="C2">C2</option>
+                                <option value="C3">C3</option>
+                                <option value="C4">C4</option>
+                                <option value="C5">C5</option>
+                            </select>
                         </div>
                     </div>
                 </div>

@@ -109,9 +109,6 @@ const MyPDF = ({ formData }) => {
           <View style={[styles.rightDown_section, {top: "29%", fontFamily: 'Helvetica-Bold'}]}>
             <Text>Categorizaciones: {formData.data2.categorizaciones}</Text>
           </View>
-          <View style={[styles.rightDown_section, {top: "31%", fontFamily: 'Helvetica'}]}>
-            <Text>Aquí va una tablita</Text>
-          </View>
           <View style={styles.title_section}>
             <Text>DATOS DE LA ATENCIÓN MÉDICA</Text>
           </View>

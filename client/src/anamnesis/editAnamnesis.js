@@ -115,8 +115,7 @@ export default function Edit() {
                         </div>
                         <div className="form-group">
                             <label className="col-form-label mt-4" for="inputDefault">Diagnóstico</label>
-                            <input
-                                type="text"
+                            <textarea
                                 className="form-control"
                                 placeholder="Ingrese Diagnóstico"
                                 id="inputDefault"
@@ -126,8 +125,7 @@ export default function Edit() {
                         </div>
                         <div className="form-group">
                             <label className="col-form-label mt-4" for="inputDefault">Diagnóstico CIE-10</label>
-                            <input
-                                type="text"
+                            <textarea
                                 className="form-control"
                                 placeholder="Ingrese Diagnóstico CIE-10"
                                 id="inputDefault"
