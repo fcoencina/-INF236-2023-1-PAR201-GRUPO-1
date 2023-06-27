@@ -21,7 +21,7 @@ Este es el repositorio del *Grupo 1*, cuyos integrantes son:
 
 * [Video Presentación Entrega 1](https://youtu.be/n5oyO6FyPAQ)
 * [Video Presentación Entrega 4](https://youtu.be/cCnYCzlATi8)
-* [Video Presentación Entrega 6 y 7]()
+* [Video Presentación Entrega 6 y 7](https://youtu.be/jfly20QKkaU)
 
 ## Objetivos
 
