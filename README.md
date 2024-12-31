@@ -95,7 +95,7 @@ Como usuario del servicio de urgencia de salud pública (SAPU), quiero que los m
 
 `Para ejecutar la aplicación correctamente es necesario tener instalado previamente Node.js junto con su gestor de paquetes(npm).`
 
-1. Descargar desde el repositorio https://github.com/fcoencina/INF236-2023-1-PAR201-GRUPO-1 el proyecto en formato .zip.
+1. Descargar desde el repositorio https://github.com/fcoencina/Sistema-Ingreso-Pacientes el proyecto en formato .zip.
 
 2. Descomprimir la carpeta INF236-2023-1-PAR201-Grupo-1-main.zip.
 
